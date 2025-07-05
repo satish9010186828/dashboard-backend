@@ -1,0 +1,26 @@
+### 1. Get Business Data
+POST http://localhost:5001/business-data
+Content-Type: application/json
+
+{
+  "name": "Cake & Co",
+  "location": "Mumbai"
+}
+
+### 2. Get Business Data (Missing Parameters)
+POST http://localhost:5001/business-data
+Content-Type: application/json
+
+{
+  "name": "",
+  "location": ""
+}
+
+### 3. Regenerate Headline
+GET http://localhost:5001/regenerate-headline?name=Cake%20%26%20Co&location=Mumbai
+
+### 4. Regenerate Headline (Missing Parameters)
+GET http://localhost:5001/regenerate-headline
+
+### 5. Invalid Endpoint (404 Test)
+GET http://localhost:5001/nonexistent-endpoint
